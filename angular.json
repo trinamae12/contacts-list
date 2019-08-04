@@ -27,7 +27,7 @@
             "outputPath": "dist/ContactsList",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "tsconfig.json",
             "aot": false,
             "assets": [
               "src/favicon.ico",

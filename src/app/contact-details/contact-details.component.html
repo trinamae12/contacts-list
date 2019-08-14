@@ -1,1 +1,7 @@
-<p>contact-details works!</p>
+<h2>Contact Details</h2>
+
+<div *ngIf="contact">
+    <h3>{{ contact.name }}</h3>
+    <h2>{{ contact.phone_number }}</h2>
+    <h2>{{ contact.address }}</h2>
+</div>

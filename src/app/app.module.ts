@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactsListComponent } from './contacts-list/contacts-list.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactsListComponent,
-    TopNavComponent
+    TopNavComponent,
+    ContactDetailsComponent
   ],
   imports: [
     BrowserModule,

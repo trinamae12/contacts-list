@@ -1,7 +1,9 @@
-<h2>Contact Details</h2>
+<h4>Contact Details</h4>
 
-<div *ngIf="contact">
-    <h3>{{ contact.name }}</h3>
-    <h2>{{ contact.phone_number }}</h2>
-    <h2>{{ contact.address }}</h2>
+<div class="card" *ngIf="contact">
+    <div class="card-body">
+        <h5>{{ contact.name }}</h5>
+        <h5>{{ contact.phone_number }}</h5>
+        <h5>{{ contact.address }}</h5>
+    </div>
 </div>

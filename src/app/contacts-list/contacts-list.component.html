@@ -1,7 +1,7 @@
 <div class="mt-3 p-3 px-5">
     <ul class="list-group">
         <li class="list-group-item" *ngFor="let contact of contacts; index as contactId">
-            <a [title]="contact.name" [routerLink]="['/products', productId]">{{ contact.name }}</a>
+            <a [title]="contact.name" [routerLink]="['/contacts', contactId]">{{ contact.name }}</a>
         </li>
     </ul>
 </div> 

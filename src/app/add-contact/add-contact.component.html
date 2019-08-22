@@ -1,12 +1,23 @@
 <div class="modal-header">
     <div class="modal-title">Add Contact</div>
-    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-    </button>
 </div>
 <div class="modal-body">
-    <p>Body here</p>
+    <form>
+        <div class="form-group">
+            <label for="contactName">Contact Name</label>
+            <input type="text" name="contactName" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" name="phoneNumber" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" name="address" class="form-control">
+        </div>
+    </form>
 </div>
 <div class="modal-footer">
+    <button type="button" class="btn btn-primary">Add Contact</button>
     <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
 </div>

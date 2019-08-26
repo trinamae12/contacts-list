@@ -8,6 +8,7 @@ import { TopNavComponent } from './top-nav/top-nav.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddContactComponent } from './add-contact/add-contact.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AddContactComponent } from './add-contact/add-contact.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule  
   ],
   entryComponents: [
     AddContactComponent

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { contacts } from '../contacts';
+import { ApiService } from '../api.service';
+import { Contact } from '../contact';
 
 @Component({
   selector: 'app-contacts-list',
@@ -7,10 +9,22 @@ import { contacts } from '../contacts';
   styleUrls: ['./contacts-list.component.scss']
 })
 export class ContactsListComponent implements OnInit {
-  contacts = contacts;
-  constructor() { }
+  //contacts = contacts;
+  contacts: Contact[] = [];
+
+  constructor(private api: ApiService) { }
+
+  getContacts(){
+    this.api.getContacts().subscribe(res => {
+      this.contacts = res;
+      console.log(contacts);
+    }, err => {
+      console.log(err);
+    });
+  }
 
   ngOnInit() {
+    this.getContacts();
   }
 
 }

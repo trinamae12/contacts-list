@@ -1,23 +1,23 @@
 <div class="modal-header">
     <div class="modal-title">Add Contact</div>
 </div>
-<div class="modal-body">
-    <form>
+<form #form="ngForm" (ngSubmit)="addContact()">
+    <div class="modal-body">
         <div class="form-group">
             <label for="contactName">Contact Name</label>
-            <input type="text" name="contactName" class="form-control">
+            <input type="text" [(ngModel)]="contact.name" name="name" class="form-control">
         </div>
         <div class="form-group">
             <label for="phoneNumber">Phone Number</label>
-            <input type="text" name="phoneNumber" class="form-control">
+            <input type="text" [(ngModel)]="contact.phone_number" name="phone_number" class="form-control">
         </div>
         <div class="form-group">
             <label for="address">Address</label>
-            <input type="text" name="address" class="form-control">
+            <input type="text" [(ngModel)]="contact.address" name="address" class="form-control">
         </div>
-    </form>
-</div>
-<div class="modal-footer">
-    <button type="button" class="btn btn-primary">Add Contact</button>
-    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
-</div>
+    </div>
+    <div class="modal-footer">
+        <input type="submit" class="btn btn-primary">
+        <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+    </div>
+</form>

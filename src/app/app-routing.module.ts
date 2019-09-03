@@ -8,7 +8,7 @@ import { AddContactComponent } from './add-contact/add-contact.component';
 
 const routes: Routes = [
   {
-    path: 'contacts',
+    path: '',
     component: ContactsListComponent
   },
   {

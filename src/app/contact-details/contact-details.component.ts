@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 import { contacts } from '../contacts';
 
 @Component({
@@ -12,7 +11,7 @@ export class ContactDetailsComponent implements OnInit {
   contact;
 
   constructor(
-    private route: ActivatedRoute,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {

@@ -9,6 +9,7 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddContactComponent } from './add-contact/add-contact.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule  
+    HttpClientModule,
+    FormsModule
   ],
   entryComponents: [
     AddContactComponent

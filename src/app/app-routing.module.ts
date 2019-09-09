@@ -3,8 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ContactsListComponent } from './contacts-list/contacts-list.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
-import { AddContactComponent } from './add-contact/add-contact.component';
-
 
 const routes: Routes = [
   {
@@ -14,10 +12,6 @@ const routes: Routes = [
   {
     path: 'contact-details/:contactId',
     component: ContactDetailsComponent
-  },
-  {
-    path: 'contact-add',
-    component: AddContactComponent
   }
 ];
 

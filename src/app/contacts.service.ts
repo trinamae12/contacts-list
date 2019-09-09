@@ -11,5 +11,9 @@ export class ContactsService {
     this.contacts.push(contact);
   }
 
+  deleteContact(contactId) {
+    this.contacts.splice(contactId,1);
+  }
+
   constructor() { }
 }

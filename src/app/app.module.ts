@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddContactComponent } from './add-contact/add-contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { DeleteContactComponent } from './delete-contact/delete-contact.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     ContactsListComponent,
     TopNavComponent,
     ContactDetailsComponent,
-    AddContactComponent
+    AddContactComponent,
+    DeleteContactComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   entryComponents: [
-    AddContactComponent
+    AddContactComponent,
+    DeleteContactComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

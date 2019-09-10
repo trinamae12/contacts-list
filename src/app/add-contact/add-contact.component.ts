@@ -16,6 +16,10 @@ export class AddContactComponent {
 
   addContact() {
      this.service.addToContact(this.contact);
-     this.activeModal.close();
+     this.close();
+  }
+
+  close() {
+    this.activeModal.close();
   }
 }

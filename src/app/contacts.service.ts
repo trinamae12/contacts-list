@@ -15,5 +15,11 @@ export class ContactsService {
     this.contacts.splice(contactId,1);
   }
 
+  editContact(contact, contactId) {
+    this.contacts[contactId].name = contact.name;
+    this.contacts[contactId].phone_number = contact.phone_number;
+    this.contacts[contactId].address = contact.address;
+  }
+
   constructor() { }
 }

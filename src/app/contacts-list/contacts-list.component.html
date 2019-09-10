@@ -4,7 +4,7 @@
             <a [title]="contact.name" [routerLink]="['/contact-details', contactId]">{{ contact.name }}</a>
             <div class="btn-toolbar float-right">
                 <div class="btn-group mr-2">
-                    <button type="button" class="btn btn-warning">
+                    <button type="button" class="btn btn-warning" (click)="openEditModal(contact, contactId)">
                         <i class="fa fa-pencil-square-o"></i>
                     </button>
                 </div>

@@ -11,6 +11,7 @@ import { AddContactComponent } from './add-contact/add-contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DeleteContactComponent } from './delete-contact/delete-contact.component';
+import { EditContactComponent } from './edit-contact/edit-contact.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DeleteContactComponent } from './delete-contact/delete-contact.componen
     TopNavComponent,
     ContactDetailsComponent,
     AddContactComponent,
-    DeleteContactComponent
+    DeleteContactComponent,
+    EditContactComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { DeleteContactComponent } from './delete-contact/delete-contact.componen
   ],
   entryComponents: [
     AddContactComponent,
-    DeleteContactComponent
+    DeleteContactComponent,
+    EditContactComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ContactsListComponent } from './contacts-list/contacts-list.component';
-import { ContactDetailsComponent } from './contact-details/contact-details.component';
-
 const routes: Routes = [
   {
     path: '',
-    component: ContactsListComponent
+    loadChildren: () => import("./contacts/contacts.module").then((m) => m.ContactsModule),
   },
   {
-    path: 'contact-details/:contactId',
-    component: ContactDetailsComponent
+    path: 'test',
+    loadChildren: () => import("./test/test.module").then((m) => m.TestModule),
   }
 ];
 

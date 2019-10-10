@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 import { AddContactComponent } from '../contacts/add-contact/add-contact.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-top-nav',

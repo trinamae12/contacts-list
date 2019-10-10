@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TopNavComponent } from './top-nav.component';
 import { RouterModule } from '@angular/router';
+
+import { TopNavComponent } from './top-nav.component';
 
 @NgModule({
   declarations: [

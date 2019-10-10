@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+
 import { ContactsService } from '../contacts.service';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-delete-contact',

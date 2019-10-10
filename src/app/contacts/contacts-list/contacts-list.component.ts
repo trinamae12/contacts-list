@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
 import { contacts } from '../contacts';
 import { DeleteContactComponent } from '../delete-contact/delete-contact.component';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EditContactComponent } from '../edit-contact/edit-contact.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-contacts-list',

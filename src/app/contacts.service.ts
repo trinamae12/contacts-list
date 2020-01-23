@@ -1,14 +1,24 @@
 import { Injectable } from '@angular/core';
 import { contacts } from '../app/contacts';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactsService {
+  
+  constructor(private firestore: AngularFirestore) { }
+
   contacts = contacts;
 
   addToContact(contact) {
-    this.contacts.push(contact);
+    //this.contacts.push(contact);
+    return this.firestore.collection('contacts')
+                        .add({
+                          name: contact.name,
+                          phone_number: contact.phone_number,
+                          address: contact.address
+                        });
   }
 
   deleteContact(contactId) {
@@ -20,6 +30,4 @@ export class ContactsService {
     this.contacts[contactId].phone_number = contact.phone_number;
     this.contacts[contactId].address = contact.address;
   }
-
-  constructor() { }
 }

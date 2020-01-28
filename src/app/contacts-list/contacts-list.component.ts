@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { contacts } from '../contacts';
 import { DeleteContactComponent } from '../delete-contact/delete-contact.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EditContactComponent } from '../edit-contact/edit-contact.component';
+import { ContactsService } from '../contacts.service';
 
 @Component({
   selector: 'app-contacts-list',
@@ -10,9 +10,22 @@ import { EditContactComponent } from '../edit-contact/edit-contact.component';
   styleUrls: ['./contacts-list.component.scss']
 })
 export class ContactsListComponent implements OnInit {
-  contacts = contacts;
+  contacts = [];
 
-  constructor(private modal: NgbModal) { }
+  constructor(private modal: NgbModal, 
+              private service: ContactsService) { }
+
+  ngOnInit() {
+    this.service.getContacts().subscribe(contactsList => {
+      this.contacts = [];
+      contactsList.forEach(contact => {
+        const result = contact.payload.doc.data() as object;
+        const {id} = contact.payload.doc;
+        const data = {id, ...result};
+        this.contacts.push(data);
+      })
+    });
+  }
 
   openDeleteModal(contactId){
     const modalRef = this.modal.open(DeleteContactComponent);
@@ -23,9 +36,6 @@ export class ContactsListComponent implements OnInit {
     const editModal = this.modal.open(EditContactComponent);
     editModal.componentInstance.contact = contact;
     editModal.componentInstance.contactId = contactId;
-  }
-
-  ngOnInit() {
   }
 
 }

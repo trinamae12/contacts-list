@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ContactsService } from '../contacts.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-add-contact',
@@ -12,7 +13,8 @@ export class AddContactComponent {
   contact: Object = {};
 
   constructor(public activeModal: NgbActiveModal,
-              private service: ContactsService) { }
+              private service: ContactsService,
+              private router: Router) { }
 
   addContact() {
      this.service.addToContact(this.contact);

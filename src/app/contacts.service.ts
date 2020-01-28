@@ -11,14 +11,17 @@ export class ContactsService {
 
   contacts = contacts;
 
+  getContacts() {
+    return this.firestore.collection('contacts').snapshotChanges();
+  }
+
   addToContact(contact) {
-    //this.contacts.push(contact);
-    return this.firestore.collection('contacts')
-                        .add({
-                          name: contact.name,
-                          phone_number: contact.phone_number,
-                          address: contact.address
-                        });
+    this.firestore.collection('contacts')
+                  .add({
+                    name: contact.name,
+                    phone_number: contact.phone_number,
+                    address: contact.address
+                  });
   }
 
   deleteContact(contactId) {

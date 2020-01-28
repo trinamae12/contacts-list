@@ -15,6 +15,7 @@ export class EditContactComponent implements OnInit {
               private service: ContactsService) { }
 
   editContact() {
+    delete this.contact.id;
     this.service.editContact(this.contact, this.contactId);
     this.close();
   }

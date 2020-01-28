@@ -33,4 +33,8 @@ export class ContactsService {
     this.contacts[contactId].phone_number = contact.phone_number;
     this.contacts[contactId].address = contact.address;
   }
+
+  getContact(contactId){
+    return this.firestore.collection('contacts').doc(contactId).snapshotChanges();
+  }
 }

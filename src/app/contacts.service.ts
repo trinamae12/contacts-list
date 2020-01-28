@@ -25,13 +25,12 @@ export class ContactsService {
   }
 
   deleteContact(contactId) {
-    this.contacts.splice(contactId,1);
+    this.firestore.collection('contacts')
+                  .doc(contactId)
+                  .delete();
   }
 
   editContact(contact, contactId) {
-    // this.contacts[contactId].name = contact.name;
-    // this.contacts[contactId].phone_number = contact.phone_number;
-    // this.contacts[contactId].address = contact.address;
     this.firestore.collection('contacts')
                   .doc(contactId)
                   .set(contact);

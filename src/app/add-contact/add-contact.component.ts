@@ -9,12 +9,11 @@ import { Router } from '@angular/router'
   styleUrls: ['./add-contact.component.scss']
 })
 export class AddContactComponent {
-
-  contact: Object = {};
-
   constructor(public activeModal: NgbActiveModal,
               private service: ContactsService,
               private router: Router) { }
+
+contact: any = {};
 
   addContact() {
      this.service.addToContact(this.contact);

@@ -13,7 +13,7 @@
                     #name="ngModel" 
                     minlength="8"
                     maxlength="24"
-                    pattern="^[A-Za-z]*$"
+                    pattern="^[A-Za-z\s]*$"
                     required>
             <div *ngIf="name.invalid && (name.dirty || name.touched)" class="invalid-feedback">
                 <div *ngIf="name.errors.required">Name is required.</div>

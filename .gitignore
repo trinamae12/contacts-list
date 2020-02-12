@@ -46,7 +46,7 @@ testem.log
 Thumbs.db
 
 # local_environment
-src/environments/environment.prod.ts
-src/environments/environment.ts
+/src/environments/environment.prod.ts
+/src/environments/environment.ts
 
 node_modules/

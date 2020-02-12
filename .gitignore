@@ -4,6 +4,8 @@
 /dist
 /tmp
 /out-tsc
+src/environments/environment.prod.ts
+src/environments/environment.ts
 # Only exists if Bazel was run
 /bazel-out
 
@@ -40,12 +42,10 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+/.firebase
 
 # System Files
 .DS_Store
 Thumbs.db
 
 node_modules/
-src/environments/environment.prod.ts
-src/environments/environment.ts
-.firebase

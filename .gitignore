@@ -45,8 +45,11 @@ testem.log
 .DS_Store
 Thumbs.db
 
+node_modules/
+
 # local_environment
 /src/environments/environment.prod.ts
 /src/environments/environment.ts
 
-node_modules/
+#deployment
+/.firebase

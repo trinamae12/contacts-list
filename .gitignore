@@ -46,10 +46,6 @@ testem.log
 Thumbs.db
 
 node_modules/
-
-# local_environment
 src/environments/environment.prod.ts
 src/environments/environment.ts
-
-#deployment
-/.firebase
+.firebase

@@ -2,9 +2,30 @@
 
 A simple app that handles contact management. It is created using Angular 8 and deployed using Firebase.
 
-## Development server
+## Features
+* Add contact
+* View contact list and contact details
+* Edit contact details
+* Remove contact from list
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Prerequisites
+Please do download and install the following requirements in order for the project to run:
+* [Nodejs](https://nodejs.org/en/)
+
+    - To check if Nodejs is installed, open command prompt and run `node -v`.
+
+* Angular CLI
+    
+    - Open command prompt and run `npm install -g @angular/cli` .
+
+## Installing ContactsList (Run project in local)
+1. Run the following commands in command prompt pointing to your destination folder.
+    
+        git pull https://github.com/trinamae12/contacts-list.git
+        npm install 
+        ng serve
+
+2. Open browser and nsavigate to `http://localhost:4200/`.
 
 ### Code scaffolding
 

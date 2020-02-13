@@ -18,26 +18,31 @@ Please do download and install the following requirements in order for the proje
     
     - Open command prompt and run `npm install -g @angular/cli` .
 
+* Firebase
+    
+    - Make sure you have a firebase account. Make sure to have an existing [ Firebase project](https://console.firebase.google.com/u/0/) and its existing firestore collection.
+
 ## Installing ContactsList (Run project in local)
 1. Run the following commands in command prompt pointing to your destination folder.
     
-        git pull https://github.com/trinamae12/contacts-list.git
+        git clone https://github.com/trinamae12/contacts-list.git
         npm install 
-        ng serve
 
-2. Open browser and nsavigate to `http://localhost:4200/`.
+2. Go to src/environments and rename **environment.sample.ts** to **environment.ts**.
+3. Open **environment.ts** and supply your firebase configurations.  
+4. Open browser and nsavigate to `http://localhost:4200/`.
 
 ### Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-### Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Building the project
+1. Open your terminal pointing inside the project. 
+2. Run `ng build --prod` to build the project. A _dist_ folder will appear in the project.
 
 ## Deployment to Firebase
-
-After `ng build`, run `firebase deploy`.
+1. After building, initialize project when deploying it for the first time.
+2. Run `firebase deploy`.
 
 ## Built With
 

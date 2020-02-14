@@ -20,7 +20,7 @@ Please do download and install the following requirements in order for the proje
 
 * Firebase
     
-    - Make sure you have a firebase account. Make sure to have an existing [ Firebase project](https://console.firebase.google.com/u/0/) and its existing firestore collection.
+    - Make sure you have a firebase account. Also, make sure to have an existing [ Firebase project](https://console.firebase.google.com/u/0/) and an existing firestore collection.
 
 ## Installing ContactsList (Run project in local)
 1. Run the following commands in command prompt pointing to your destination folder.

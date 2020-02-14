@@ -30,7 +30,8 @@ Please do download and install the following requirements in order for the proje
 
 2. Go to src/environments and rename **environment.sample.ts** to **environment.ts**.
 3. Open **environment.ts** and supply your firebase configurations.  
-4. Open browser and nsavigate to `http://localhost:4200/`.
+4. Run `ng serve` in terminal. 
+5. Open browser and navigate to `http://localhost:4200/`.
 
 ### Code scaffolding
 

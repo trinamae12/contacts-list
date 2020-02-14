@@ -77,6 +77,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ContactsList"
+    }
+  },
+  "defaultProject": "ContactsList",
+  "cli": {
+    "packageManager": "yarn"
+  }
 }

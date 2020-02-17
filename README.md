@@ -1,6 +1,6 @@
 # ContactsList
 
-A simple app that handles contact management. It is created using Angular 8 and deployed using Firebase.
+A simple app that handles contact management. It is created using Angular and deployed using Firebase. Its dependencies are managed using Yarn.
 
 ## Features
 * Add contact
@@ -14,9 +14,13 @@ Please do download and install the following requirements in order for the proje
 
     - To check if Nodejs is installed, open command prompt and run `node -v`.
 
+* Yarn
+
+    - Install yarn using npm by running `npm i -g yarn`. To check, run `yarn`.
+
 * Angular CLI
     
-    - Open command prompt and run `npm install -g @angular/cli` .
+    - Open command prompt and run `yarn add -g @angular/cli` .
 
 * Firebase
     
@@ -26,11 +30,11 @@ Please do download and install the following requirements in order for the proje
 1. Run the following commands in command prompt pointing to your destination folder.
     
         git clone https://github.com/trinamae12/contacts-list.git
-        npm install 
+        yarn 
 
 2. Go to src/environments and rename **environment.sample.ts** to **environment.ts**.
 3. Open **environment.ts** and supply your firebase configurations.  
-4. Run `ng serve` in terminal. 
+4. Run `yarn start` in terminal. 
 5. Open browser and navigate to `http://localhost:4200/`.
 
 ### Code scaffolding

@@ -30,7 +30,8 @@ Please do download and install the following requirements in order for the proje
 1. Run the following commands in command prompt pointing to your destination folder.
     
         git clone https://github.com/trinamae12/contacts-list.git
-        yarn 
+        cd contacts-list
+        yarn install
 
 2. Go to src/environments and rename **environment.sample.ts** to **environment.ts**.
 3. Open **environment.ts** and supply your firebase configurations.  

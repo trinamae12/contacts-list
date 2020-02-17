@@ -1,4 +1,13 @@
+/**
+ * Application Polyfills
+ */
 import 'zone.js/dist/zone';
+import '@angular/localize/init';
+
+/**
+ * Main File
+ */
+
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 

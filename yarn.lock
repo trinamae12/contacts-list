@@ -171,10 +171,10 @@
   resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-9.1.0-next.4.tgz#7301aa3d50873b46a23de7fc8981496bac8748d4"
   integrity sha512-2443k2hvUbO48lWJNfO7axRlFipt/rIdx0Uygq3dEmzlotiCf9naCwcm/aR+yKg/KoHOSN74Zt66AgINv879Yw==
 
-"@angular/core@9.1.0-next.0":
-  version "9.1.0-next.0"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-9.1.0-next.0.tgz#4b0c5975f9a5a19bef9c80a742e008d6272b5336"
-  integrity sha512-MUVdabNjlsHGAKNATqJCFDW22ZZ+KswSxURyDN6+DPZTm+i6i5nLLFqCmzrOYmkryh+Felua0Q7KB3ywOLbgiQ==
+"@angular/core@^9.0.6":
+  version "9.0.6"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-9.0.6.tgz#cc72d859359b1bddc052549c20092905d6246ce7"
+  integrity sha512-egpVGqqI+L1QQFn9ziHIElXb0bCzY1l8vzyQGfm2KnxHpmx2TJp2uaaHh5LRcqYR7TLeGMpqmzhRxir6Up7AAQ==
 
 "@angular/fire@^5.3.0":
   version "5.4.2"
@@ -205,10 +205,10 @@
   resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-9.1.0-next.4.tgz#89d9358bc0926f7521b298564c4ce07da553d6cd"
   integrity sha512-lSctS8AXEkCpnmgBCn74Ord0lFLXXBoWv2L8JQID35zHv3/JEUEwD1XUfWh1mthbt4JNlpZ7NnpYextjFl0Lhw==
 
-"@angular/router@~9.1.0-next.0":
-  version "9.1.0-next.4"
-  resolved "https://registry.yarnpkg.com/@angular/router/-/router-9.1.0-next.4.tgz#670ecaf600ee867ba6dffb0ac5ccce1f5b7d47c0"
-  integrity sha512-7BP6H8hvxE2ph8rFzRC+ztS59OOhdVwPZU75M8kTVcO6pBxicYvRdHjp7HnqqzBwLADMxEce9sZ6cqTyg3RidA==
+"@angular/router@^9.0.6":
+  version "9.0.6"
+  resolved "https://registry.yarnpkg.com/@angular/router/-/router-9.0.6.tgz#a0d38380916337c4c0359892c03f75f93bf469bd"
+  integrity sha512-Ki1uk3jWPsoFh27SnyXatPSFK3ghF25pjiwWw9/inPvlS/HshSWgS2FbYf49LD5xVFF3Ni2Z5GRKxSEqxL8vQw==
 
 "@babel/code-frame@^7.5.5", "@babel/code-frame@^7.8.3":
   version "7.8.3"
@@ -5271,7 +5271,7 @@ node-libs-browser@^2.2.1:
     util "^0.11.0"
     vm-browserify "^1.0.1"
 
-node-pre-gyp@*, node-pre-gyp@^0.14.0:
+node-pre-gyp@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.14.0.tgz#9a0596533b877289bcad4e143982ca3d904ddc83"
   integrity sha512-+CvDC7ZttU/sSt9rFjix/P05iS43qHCOOGzcr3Ry99bXG7VX953+vFyEuph/tfqoYu8dttBkE86JSKBO2OzcxA==

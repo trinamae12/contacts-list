@@ -1,42 +1,36 @@
-import { Injectable } from '@angular/core';
-import { contacts } from '../app/contacts';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { Injectable } from "@angular/core";
+import { AngularFirestore } from "@angular/fire/firestore";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class ContactsService {
-  
-  constructor(private firestore: AngularFirestore) { }
-
-  contacts = contacts;
+  constructor(private firestore: AngularFirestore) {}
 
   getContacts() {
-    return this.firestore.collection('contacts').snapshotChanges();
+    return this.firestore.collection("contacts").snapshotChanges();
   }
 
   addToContact(contact) {
-    this.firestore.collection('contacts')
-                  .add({
-                    name: contact.name,
-                    phone_number: contact.phone_number,
-                    address: contact.address
-                  });
+    this.firestore.collection("contacts").add({
+      name: contact.name,
+      phone_number: contact.phone_number,
+      address: contact.address,
+    });
   }
 
   deleteContact(contactId) {
-    this.firestore.collection('contacts')
-                  .doc(contactId)
-                  .delete();
+    this.firestore.collection("contacts").doc(contactId).delete();
   }
 
   editContact(contact, contactId) {
-    this.firestore.collection('contacts')
-                  .doc(contactId)
-                  .set(contact);
+    this.firestore.collection("contacts").doc(contactId).set(contact);
   }
 
-  getContact(contactId){
-    return this.firestore.collection('contacts').doc(contactId).snapshotChanges();
+  getContact(contactId) {
+    return this.firestore
+      .collection("contacts")
+      .doc(contactId)
+      .snapshotChanges();
   }
 }

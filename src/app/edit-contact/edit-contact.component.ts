@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 import { ContactsService } from "../contacts.service";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: "app-edit-contact",
@@ -8,10 +8,23 @@ import { ContactsService } from "../contacts.service";
   styleUrls: ["./edit-contact.component.scss"],
 })
 export class EditContactComponent implements OnInit {
-  @Input() public contact;
-  @Input() public contactId;
+  contact;
+  contactId;
 
-  constructor(public modal: NgbActiveModal, private service: ContactsService) {}
+  constructor(
+    private service: ContactsService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
+
+  ngOnInit() {
+    this.route.paramMap.subscribe((params) => {
+      this.contactId = params.get("id");
+      this.service.getContact(params.get("id")).subscribe((details) => {
+        this.contact = details.payload.data();
+      });
+    });
+  }
 
   editContact() {
     delete this.contact.id;
@@ -20,8 +33,6 @@ export class EditContactComponent implements OnInit {
   }
 
   close() {
-    this.modal.close();
+    this.router.navigateByUrl("/");
   }
-
-  ngOnInit() {}
 }

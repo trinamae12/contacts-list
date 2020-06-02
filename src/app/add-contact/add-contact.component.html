@@ -1,50 +1,76 @@
-<div class="modal-header">
-    <div class="modal-title">Add Contact</div>
-</div>
+<h4>Add Contact</h4>
 <form #form="ngForm" (ngSubmit)="addContact()">
-    <div class="modal-body">
-        <div class="form-group">
-            <label for="contactName">Contact Name</label>
-            <input type="text" 
-                    [(ngModel)]="contact.name" 
-                    name="name" 
-                    class="form-control"
-                    [ngClass] = "{'is-invalid': name.errors && (name.dirty || name.touched)}" 
-                    #name="ngModel" 
-                    minlength="8"
-                    maxlength="24"
-                    pattern="^[A-Za-z\s]*$"
-                    required>
-            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="invalid-feedback">
-                <div *ngIf="name.errors.required">Name is required.</div>
-                <div *ngIf="name.errors.minlength">Name should be above minimum length.</div>
-                <div *ngIf="name.errors.pattern">Name should not have numeric characters.</div> 
-            </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="contactName">Contact Name</label>
+      <input
+        type="text"
+        [(ngModel)]="contact.name"
+        name="name"
+        class="form-control"
+        [ngClass]="{
+          'is-invalid': name.errors && (name.dirty || name.touched)
+        }"
+        #name="ngModel"
+        minlength="8"
+        maxlength="24"
+        pattern="^[A-Za-z\s]*$"
+        required
+      />
+      <div
+        *ngIf="name.invalid && (name.dirty || name.touched)"
+        class="invalid-feedback"
+      >
+        <div *ngIf="name.errors.required">Name is required.</div>
+        <div *ngIf="name.errors.minlength">
+          Name should be above minimum length.
         </div>
-        <div class="form-group">
-            <label for="phoneNumber">Phone Number</label>
-            <input type="text" [(ngModel)]="contact.phone_number" 
-                                name="phone_number" 
-                                class="form-control"
-                                [ngClass] = "{'is-invalid': phone.errors && (phone.dirty || phone.touched)}"
-                                #phone="ngModel"
-                                minlength="6"
-                                maxlength="20"
-                                pattern="^([0-9]+-)*[0-9]+$"
-                                required>
-            <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="invalid-feedback">
-                <div *ngIf="phone.errors.required">Phone number is required.</div>
-                <div *ngIf="phone.errors.minlength">Phone number should be above minimum length.</div>
-                <div *ngIf="phone.errors.pattern">Invalid phone number format.</div> 
-            </div>
+        <div *ngIf="name.errors.pattern">
+          Name should not have numeric characters.
         </div>
-        <div class="form-group">
-            <label for="address">Address</label>
-            <input type="text" [(ngModel)]="contact.address" name="address" class="form-control">
-        </div>
+      </div>
     </div>
-    <div class="modal-footer">
-        <input type="submit" [disabled]="!form.valid" class="btn btn-primary">
-        <button type="button" class="btn btn-outline-dark" (click)="close()">Close</button>
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input
+        type="text"
+        [(ngModel)]="contact.phone_number"
+        name="phone_number"
+        class="form-control"
+        [ngClass]="{
+          'is-invalid': phone.errors && (phone.dirty || phone.touched)
+        }"
+        #phone="ngModel"
+        minlength="6"
+        maxlength="20"
+        pattern="^([0-9]+-)*[0-9]+$"
+        required
+      />
+      <div
+        *ngIf="phone.invalid && (phone.dirty || phone.touched)"
+        class="invalid-feedback"
+      >
+        <div *ngIf="phone.errors.required">Phone number is required.</div>
+        <div *ngIf="phone.errors.minlength">
+          Phone number should be above minimum length.
+        </div>
+        <div *ngIf="phone.errors.pattern">Invalid phone number format.</div>
+      </div>
     </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input
+        type="text"
+        [(ngModel)]="contact.address"
+        name="address"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="modal-footer">
+    <input type="submit" [disabled]="!form.valid" class="btn btn-primary" />
+    <button type="button" class="btn btn-outline-dark" (click)="close()">
+      Close
+    </button>
+  </div>
 </form>

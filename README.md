@@ -26,7 +26,7 @@ Please do download and install the following requirements in order for the proje
   - Open command prompt and run `npm i -g @angular/cli`.
 
 - Firebase
-  - Make sure you have a firebase account. Also, make sure to have an existing [Firebase project](https://console.firebase.google.com/u/0/) and an existing firestore collection named **Contacts**.
+  - Make sure you have a firebase account. Also, make sure to have an existing [Firebase project](https://console.firebase.google.com/u/0/) and an existing firestore collection named **contacts**.
 
 ## Installing ContactsList (Run project in local)
 

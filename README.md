@@ -1,6 +1,6 @@
 # ContactsList
 
-A simple app that handles contact management. It is created using Angular 9 and deployed using Firebase. Its dependencies are managed using Yarn.
+A simple app that handles contact management. It is created using Angular 10 and deployed using Firebase. Its dependencies are managed using Yarn.
 
 ## Features
 
